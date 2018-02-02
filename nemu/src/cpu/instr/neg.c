@@ -12,5 +12,6 @@ make_instr_func(negv){
         cpu.eflags.CF = 1;
         
     opr_src.val = -opr_src.val;
+    operand_write(&opr_src);
     return len;
 }
